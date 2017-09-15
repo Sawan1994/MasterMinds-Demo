@@ -1,0 +1,48 @@
+<h1>Player details</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Position</td>
+      <td>Jersey No.</td>
+      <td>DOB</td>
+      <td>Nationality</td>
+      <td>Contract</td>
+      <td>Value<td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of playerList">
+      <td>{{player.name}}</td>
+      <td>{{player.position}}</td>
+      <td>{{player.jerseyNumber}}</td>
+      <td>{{player.dateOfBirth}}</td>
+      <td>{{player.nationality}}</td>
+      <td>{{player.contractUntil}}</td>
+      <td>{{player.marketValue}}</td>
+    </tr>
+  </tbody>
+</table>
+<h1>Fixture details</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td>Home team</td>
+      <td>Away team</td>
+      <td>Date</td>
+      <td>Status</td>
+      <td>Match day</td>
+      <td>Countdown</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let fixture of fixtureList">
+      <td>{{fixture.homeTeamName}}</td>
+      <td>{{fixture.awayTeamName}}</td>
+      <td>{{fixture.date}}</td>
+      <td>{{fixture.status}}</td>
+      <td>{{fixture.matchday}}</td>
+      <td>{{fixture.days+' days:'+fixture.hours+' hrs:'+fixture.minutes+' mins'}}</td>
+    </tr>
+  </tbody>
+</table>

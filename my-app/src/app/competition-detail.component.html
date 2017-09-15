@@ -1,0 +1,10 @@
+<h1>Competition detail</h1>
+<div class="row">
+  <div class="col-xs-6">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let competition of competitionList" (click)="goToStandings(competition.id)">
+      {{competition.caption}}
+    </li>
+  </ul>
+  </div>
+</div>
